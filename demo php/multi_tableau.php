@@ -53,6 +53,7 @@ unset ($listeDeFilmsParCategorie['scienceFiction'][1]);
 
 //Réindexez la catégorie "Science fiction" avec array_values().
 //$listeDeFilmsParCategorie = array_values($listeDeFilmsParCategorie['scienceFiction']);
+print_r(array_values($listeDeFilmsParCategorie['scienceFiction']));
 
 //Supprimez l'année de sortie du film "Le dîner de cons" (avec unset()).
 unset ($listeDeFilmsParCategorie['comedie'][0]['annee']);
