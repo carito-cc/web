@@ -70,7 +70,7 @@ $etatEbriete = readline("Quel était l'état d'ébriété du ministre (0 = sobre
 }
 
 /*Écrivez un programme qui évalue la réaction du ministre en fonction de plusieurs scénarios à l'aide de 
-structures conditionnelles imbriquées :
+structures conditionnelles imbriquées:
 
 Pour faciliter la lecture, utilisez trois variables pouvant accueillir une valeur booléenne : 
 $estPresent, $aFaitPipi, et $estEmeche, qui correspondent respectivement à la présence du ministre,
@@ -79,7 +79,7 @@ au fait qu'il ait été vu en train de faire pipi, et à son état d'ébriété.
 $estPresent = true;
 $aFaitPipi = true;
 $estEmeche = false;
-PHP
+
 Si le ministre était présent :
 Si le ministre a été vu en train de faire pipi :
 Si le ministre était éméché, affichez le message 
@@ -91,6 +91,24 @@ Si le ministre n'était pas présent, affichez le message "Le ministre n'était 
 Testez votre programme en modifiant les valeurs des variables pour chaque scénario, et vérifiez que les messages
 s'affichent correctement en fonction des conditions.
 */
-
+$estPresent = true;
+$aFaitPipi = true;  
+$estEmeche = false;
+if ($estPresent) 
+    {
+    echo "Le ministre était présent\n";
+         if ($aFaitPipi) {
+            if ($estEmeche) {
+            echo "Le ministre ne se souvient pas de tout à cause de son état d'ébriété.\n";
+            } else {
+            echo "Le ministre était en train de jouer un air de guitare devant ses invités.\n";
+            }
+        } else {
+            echo "Le ministre était là, mais il ne savait rien des agissements de ses invités.\n";
+    }
+} else {
+    echo "La ministre était absent,";
+    echo "Le ministre n'était pas là pendant l'incident.\n";
+}
 
 ?>
