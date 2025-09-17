@@ -80,14 +80,18 @@ $estPresent = true;
 $aFaitPipi = true;
 $estEmeche = false;
 
-Si le ministre était présent :
-Si le ministre a été vu en train de faire pipi :
-Si le ministre était éméché, affichez le message 
-"Le ministre ne se souvient pas de tout à cause de son état d'ébriété."
-Sinon, affichez le message "Le ministre était en train de jouer un air de guitare devant ses invités."
-Si le ministre n'a pas été vu en train de faire pipi, affichez le message 
-"Le ministre était là, mais il ne savait rien des agissements de ses invités."
-Si le ministre n'était pas présent, affichez le message "Le ministre n'était pas là pendant l'incident."
+-Si le ministre était présent :
+    -Si le ministre a été vu en train de faire pipi :
+        -Si le ministre était éméché, affichez le message 
+         "Le ministre ne se souvient pas de tout à cause de son état d'ébriété."
+
+        -Sinon, affichez le message "Le ministre était en train de jouer un air de guitare devant ses invités."
+
+    -Si le ministre n'a pas été vu en train de faire pipi, affichez le message 
+     "Le ministre était là, mais il ne savait rien des agissements de ses invités."
+
+-Si le ministre n'était pas présent, affichez le message "Le ministre n'était pas là pendant l'incident."
+
 Testez votre programme en modifiant les valeurs des variables pour chaque scénario, et vérifiez que les messages
 s'affichent correctement en fonction des conditions.
 */
