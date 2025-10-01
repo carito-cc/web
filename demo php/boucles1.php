@@ -116,16 +116,85 @@ L'objectif de l'exercice suivant est de réaliser un petit programme avec la bou
 trouver un nombre mystère (entre 1 et 20) :
 
 1-. Déclarez et initialisez la variable $nombreMystere avec la fonction rand() pour qu'elle renvoie un nombre 
-entier de façon pseudo-aléatoire compris entre 1 et 20.
-2-. Déclarez et initialisez la variable $compteur qui sera utiliser pour stocker le nombre de tentatives.
-3-. Utilisez la fonction readline() pour que le programme vous demande de proposer un nombre jusqu'au moment votre
-nombre sera égal à celui du nombre mystère.
-4-. Si le nombre que vous proposez n'est pas le bon, le programme vous affichera ceci dans la console avant de vous
+entier de façon pseudo-aléatoire compris entre 1 et 20.*/
+$nombreMystere = rand(1, 20);
+echo "Le nombre mystère est : $nombreMystere \n";
+
+
+/*2-. Déclarez et initialisez la variable $compteur qui sera utiliser pour stocker le nombre de tentatives.*/
+
+$nombreMystere = rand(1, 20);
+$tentatives = 0;
+$proposition = 0;
+
+echo "Le deuxieme nombre mystère est : $nombreMystere \n";
+
+
+/*3-. Utilisez la fonction readline() pour que le programme vous demande de proposer un nombre jusqu'au moment votre
+nombre sera égal à celui du nombre mystère.*/
+
+$nombreMystere = rand(1, 20);
+$proposition = 0;
+
+while ($proposition != $nombreMystere) {
+    $proposition = (int) readline("Proposez un nombre : ");
+}
+
+
+/*4-. Si le nombre que vous proposez n'est pas le bon, le programme vous affichera ceci dans la console avant de vous
 demander une nouvelle proposition :
         Si le nombre mystère est plus petit que le nombre proposé : "Le nombre mystère est plus petit!"
-        Si le nombre mystère est plus grand que le nombre proposé : "Le nombre mystère est plus grand!"
-5-. Finalement, lorsque le nombre mystère est trouvé, le programme affichera ceci : "Félicitations, vous avez 
+        Si le nombre mystère est plus grand que le nombre proposé : "Le nombre mystère est plus grand!"*/
+
+$nombreMystere = rand(1, 20);
+$tentatives = 0;
+$proposition = 0;
+
+echo "--- Jeu du Nombre Mystère (1 à 20) ---\n";
+echo "Devinez le nombre.\n";
+
+while ($proposition != $nombreMystere) {
+    
+    $tentatives++;
+    $proposition = (int) readline(
+        "Tentative $tentatives : Proposez un nombre entier (1-20) : "
+    );
+    
+    if ($proposition < $nombreMystere) {
+        echo "C'est plus grand !\n";
+    } elseif ($proposition > $nombreMystere) {
+        echo "C'est plus petit !\n";
+    }
+}
+
+/*5-. Finalement, lorsque le nombre mystère est trouvé, le programme affichera ceci : "Félicitations, vous avez 
 découvert le nombre mystère : $nombreMystere en $compteur tentatives."
 Comme nous n'avons pas encore vu la méthode rand(), je vais vous fournir le début de la solution :
     $nombreMystere = rand(1, 20);
 */
+
+$nombreMystere = rand(1, 20);
+$tentatives = 0;
+$proposition = 0;
+
+echo "--- Jeu du Nombre Mystère (1 à 20) ---\n";
+echo "Devinez le nombre.\n";
+
+while ($proposition != $nombreMystere) {
+    
+    $tentatives++;
+    
+    $proposition = (int) readline(
+        "Tentative $tentatives : Proposez un nombre entier (1-20) : "
+    );
+    
+    if ($proposition < $nombreMystere) {
+        echo "Le nombre mystère est plus grand!\n";
+    } elseif ($proposition > $nombreMystere) {
+        echo "Le nombre mystère est plus petit!\n";
+    }
+}
+
+echo "Félicitations, vous avez découvert le nombre mystère : $nombreMystere en $tentatives tentatives.\n";
+
+?>
