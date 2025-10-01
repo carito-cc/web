@@ -2,11 +2,32 @@
 /*Exo-boucles-01
 Créer un programme qui affiche un compte à rebours de 5 à 1.
 
-1-. À l'aide d'une boucle while, faites en sorte que le compteur commence à 5 et s'arrête lorsqu'il atteint 1.
-2-. Affichez dans le terminal la valeur du compteur à chaque itération de la boucle.
-*/
+1-. À l'aide d'une boucle while, faites en sorte que le compteur commence à 5 et s'arrête lorsqu'il atteint 1.*/
+$compteur = 5;
+
+while ($compteur >= 1) {
+    echo "\$compteur vaut: $compteur" . PHP_EOL;
+    $compteur--;
+}
+
+echo "Compte à rebours terminé! \n";
 
 
+/*2-. Affichez dans le terminal la valeur du compteur à chaque itération de la boucle.*/
+
+$compteur = 1;
+   
+echo "\$compteur vaut:  $compteur \n";
+    $compteur++;
+echo "\$compteur vaut:  $compteur \n";
+    $compteur++;
+echo "\$compteur vaut:  $compteur \n";
+    $compteur++;
+echo "\$compteur vaut:  $compteur \n";
+    $compteur++;
+echo "\$compteur vaut:  $compteur \n";
+    $compteur++;
+echo "Compte à rebours terminé! \n";
 
 
 /*Exo-boucles-02
@@ -15,16 +36,79 @@ variables $valDebut et $valFin.
 
 1-. Déclarez et initialisez deux variables :
         $valDebut, qui représentera la valeur de départ du compteur
-        $valFin, qui représentera la valeur d'arrêt
-2-. À l'aide d'une boucle while, faites en sorte que le compteur commence à la valeur contenue dans $valDebut 
-et s'arrête une fois qu'il atteint la valeur contenue dans $valFin.
-3-. Affichez dans le terminal la valeur du compteur à chaque itération de la boucle, de $valDebut jusqu'à $valFin.
+        $valFin, qui représentera la valeur d'arrêt */
+
+$valDebut = 10; 
+$valFin = 5;
+
+$compteur = $valDebut;
+
+echo "Démarrage du compte de $valDebut à $valFin :\n";
+echo "--------------------------------------\n";
+
+echo "Compteur actuel : " . $compteur . "\n";
+$compteur--; 
+
+echo "Compteur actuel : " . $compteur . "\n";
+$compteur--; 
+
+echo "Compteur actuel : " . $compteur . "\n";
+$compteur--; 
+
+echo "Compteur actuel : " . $compteur . "\n";
+$compteur--; 
+
+echo "Compteur actuel : " . $compteur . "\n";
+$compteur--; 
+
+echo "Compteur actuel : " . $compteur . "\n";
+$compteur--; 
+
+echo "--------------------------------------\n";
+echo "Compte à rebours terminé! \n";
+
+/*2-. À l'aide d'une boucle while, faites en sorte que le compteur commence à la valeur contenue dans $valDebut 
+et s'arrête une fois qu'il atteint la valeur contenue dans $valFin.*/
+
+$valDebut = 10; 
+$valFin = 5;
+
+$compteur = $valDebut;
+
+echo "Démarrage du compte de $valDebut à $valFin :\n";
+echo "--------------------------------------\n";
+
+while ($compteur >= $valFin) {
+    
+    echo "Compteur actuel : " . $compteur . "\n";
+    
+    $compteur--; 
+}
+
+echo "--------------------------------------\n";
+echo "Compte à rebours terminé! \n";
+
+
+/*3-. Affichez dans le terminal la valeur du compteur à chaque itération de la boucle, de $valDebut jusqu'à $valFin.
 */
 
+$valDebut = 15; 
+$valFin = 10;
 
+$compteur = $valDebut;
 
+echo "Démarrage du compte de $valDebut à $valFin :\n";
+echo "--------------------------------------\n";
 
+while ($compteur >= $valFin) {
+    
+    echo "Compteur actuel : " . $compteur . "\n";
+    
+    $compteur--; 
+}
 
+echo "--------------------------------------\n";
+echo "Compte à rebours terminé! \n";
 
 /*
 Exo-boucles-03
